@@ -10,12 +10,4 @@ class Api::V1::ClockInsController < ApplicationController
     return error_response(400, 'Fail to clock in for some reason') unless clock_in
     index
   end
-
-  private
-
-  def current_user
-    @user ||= User.find_by(id: params[:user_id])
-    return error_response(404, 'User not found') if @user.nil?
-    @user
-  end
 end
