@@ -35,7 +35,7 @@ class SleepCalculator
   end
 
   def remove_duplicate(clock_ins)
-    prev = clock_ins.first.sleep
+    prev = clock_ins.first&.sleep
     clock_ins.map.with_index do |clock_in, index|
       next if index == 0
       if clock_in.sleep == prev
