@@ -18,8 +18,8 @@ class Api::V1::FollowsController < ApplicationController
 
   def sleep_ranking
     result = current_user.followeds.map do |user|
-                { user.name => user.sleep_times_from_days_ago }
-              end.sort_by { |_, sleep_times| sleep_times }.reverse!
+                user.as_json.merge(total_sleep_times: user.sleep_times_from_days_ago)
+              end.sort_by { |h| h[:total_sleep_times] }.reverse!
     success_response(result)
   end
 end
