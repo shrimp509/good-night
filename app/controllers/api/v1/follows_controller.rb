@@ -1,5 +1,5 @@
 class Api::V1::FollowsController < ApplicationController
-  before_action :current_user, except: [:index]
+  before_action :current_user
 
   def create
     followed = User.find_by(id: params[:follow_id])
@@ -14,5 +14,12 @@ class Api::V1::FollowsController < ApplicationController
     return error_response(400, 'User is not followed') unless follow_record
     follow_record.destroy
     success_response('Unfollow success')
+  end
+
+  def sleep_ranking
+    result = current_user.followeds.map do |user|
+                { user.name => user.sleep_times_from_days_ago }
+              end.sort_by { |_, sleep_times| sleep_times }.reverse!
+    success_response(result)
   end
 end
