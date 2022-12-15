@@ -8,14 +8,14 @@ class SleepCalculator
     clock_ins = filter_noises(@clock_ins)
     total_sleep_times = 0
     clock_ins.each_with_index do |clock_in, index|
-      if !clock_in.sleep && clock_ins[index+1].sleep
+      if !clock_in.sleep && clock_ins[index+1]&.sleep
         total_sleep_times += clock_in.created_at - clock_ins[index+1].created_at
       end
     end
-    total_sleep_times
+    seconds_to_hours(total_sleep_times)
   end
 
-  # private
+  private
   
   def filter_noises(clock_ins)
     remove_duplicate(
@@ -36,16 +36,18 @@ class SleepCalculator
 
   def remove_duplicate(clock_ins)
     prev = clock_ins.first.sleep
-    clock_ins[1..].map.with_index do |clock_in, index|
+    clock_ins.map.with_index do |clock_in, index|
+      next if index == 0
       if clock_in.sleep == prev
-        if prev
-          clock_ins.delete(index-1)
-        else
-          clock_ins.delete(index)
-        end
+        deleted_index = prev ? index : index-1
+        clock_ins[deleted_index] = nil
       end
       prev = clock_in.sleep
     end
-    clock_ins
+    clock_ins.compact
+  end
+
+  def seconds_to_hours(sec)
+    sec.to_f / 3600
   end
 end

@@ -1,7 +1,94 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  user: one
+# Normal Case for normal_user, result: [1,2,3,4,5,6]
+normal-1:
+  user: normal_user
+  created_at: DateTime.parse("2022-12-10 23:00")
+  sleep: true
 
-two:
-  user: two
+normal-2:
+  user: normal_user
+  created_at: DateTime.parse("2022-12-11 7:00")
+  sleep: false
+
+normal-3:
+  user: normal_user
+  created_at: DateTime.parse("2022-12-11 13:00")
+  sleep: true
+
+normal-4:
+  user: normal_user
+  created_at: DateTime.parse("2022-12-11 14:00")
+  sleep: false
+
+normal-5:
+  user: normal_user
+  created_at: DateTime.parse("2022-12-12 00:30")
+  sleep: true
+
+normal-6:
+  user: normal_user
+  created_at: DateTime.parse("2022-12-12 8:00")
+  sleep: false
+
+# Some sleep is not over, result: [2,3]
+notover-1:
+  user: sleep_not_yet_over
+  created_at: DateTime.parse("2022-12-10 8:00")
+  sleep: false
+
+notover-2:
+  user: sleep_not_yet_over
+  created_at: DateTime.parse("2022-12-10 23:00")
+  sleep: true
+
+notover-3:
+  user: sleep_not_yet_over
+  created_at: DateTime.parse("2022-12-11 5:00")
+  sleep: false
+
+notover-4:
+  user: sleep_not_yet_over
+  created_at: DateTime.parse("2022-12-11 12:00")
+  sleep: true
+
+# Some clock_ins are duplicate, result: [2,3,7,8]
+duplicate-1:
+  user: duplicate_sleep
+  created_at: DateTime.parse("2022-12-10 23:00")
+  sleep: true
+
+duplicate-2:
+  user: duplicate_sleep
+  created_at: DateTime.parse("2022-12-11 00:30")
+  sleep: true
+
+duplicate-3:
+  user: duplicate_sleep
+  created_at: DateTime.parse("2022-12-11 8:30")
+  sleep: false
+
+duplicate-4:
+  user: duplicate_sleep
+  created_at: DateTime.parse("2022-12-11 9:00")
+  sleep: false
+
+duplicate-5:
+  user: duplicate_sleep
+  created_at: DateTime.parse("2022-12-11 10:00")
+  sleep: false
+
+duplicate-6:
+  user: duplicate_sleep
+  created_at: DateTime.parse("2022-12-11 22:00")
+  sleep: true
+
+duplicate-7:
+  user: duplicate_sleep
+  created_at: DateTime.parse("2022-12-11 23:00")
+  sleep: true
+
+duplicate-8:
+  user: duplicate_sleep
+  created_at: DateTime.parse("2022-12-12 5:00")
+  sleep: false

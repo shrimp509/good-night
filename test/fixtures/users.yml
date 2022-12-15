@@ -1,7 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
+normal_user:
+  name: normal_user
 
-two:
-  name: MyString
+friend_of_normal_user:
+  name: friend
+
+sleep_not_yet_over:
+  name: sleep_not_yet_over
+
+duplicate_sleep:
+  name: duplicate_sleep
