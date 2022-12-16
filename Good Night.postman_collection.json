@@ -1,0 +1,834 @@
+{
+	"info": {
+		"_postman_id": "8ce6a566-3005-48b3-a493-f4edc95043bf",
+		"name": "Good Night",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3258261"
+	},
+	"item": [
+		{
+			"name": "Add a Clock In",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": 403821611\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/v1/clock_ins",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"clock_ins"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": 403821611\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/api/v1/clock_ins",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"clock_ins"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"74a69a1a1978fe9afdf5478366a78cc8\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "8727f6fe-57e8-4ebd-9e7a-869f3411e100"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.018808"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "start_processing.action_controller;dur=0.18, sql.active_record;dur=5.57, instantiation.active_record;dur=0.27, process_action.action_controller;dur=9.69"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"id\": 980982503,\n            \"user_id\": 403821611,\n            \"created_at\": \"2022-12-16T01:41:17.590Z\",\n            \"updated_at\": \"2022-12-16T01:41:17.590Z\",\n            \"sleep\": true\n        },\n        {\n            \"id\": 389161873,\n            \"user_id\": 403821611,\n            \"created_at\": \"2022-12-12T08:00:00.000Z\",\n            \"updated_at\": \"2022-12-15T13:02:29.008Z\",\n            \"sleep\": false\n        },\n        {\n            \"id\": 238776885,\n            \"user_id\": 403821611,\n            \"created_at\": \"2022-12-12T00:30:00.000Z\",\n            \"updated_at\": \"2022-12-15T13:02:29.008Z\",\n            \"sleep\": true\n        },\n        {\n            \"id\": 960250530,\n            \"user_id\": 403821611,\n            \"created_at\": \"2022-12-11T14:00:00.000Z\",\n            \"updated_at\": \"2022-12-15T13:02:29.008Z\",\n            \"sleep\": false\n        },\n        {\n            \"id\": 660133635,\n            \"user_id\": 403821611,\n            \"created_at\": \"2022-12-11T13:00:00.000Z\",\n            \"updated_at\": \"2022-12-15T13:02:29.008Z\",\n            \"sleep\": true\n        },\n        {\n            \"id\": 274720666,\n            \"user_id\": 403821611,\n            \"created_at\": \"2022-12-11T07:00:00.000Z\",\n            \"updated_at\": \"2022-12-15T13:02:29.008Z\",\n            \"sleep\": false\n        },\n        {\n            \"id\": 156677678,\n            \"user_id\": 403821611,\n            \"created_at\": \"2022-12-10T23:00:00.000Z\",\n            \"updated_at\": \"2022-12-15T13:02:29.008Z\",\n            \"sleep\": true\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Follow someone",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": 403821611,\n    \"follow_id\": 300136223\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/v1/follows",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"follows"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Failed: already followed",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": 403821611,\n    \"follow_id\": 300136223\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/api/v1/follows",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"follows"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "499dacae-9610-4cd8-ac6d-3e21f03a7518"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.015531"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "start_processing.action_controller;dur=0.25, sql.active_record;dur=2.25, instantiation.active_record;dur=0.09, process_action.action_controller;dur=5.18"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"err_msg\": \"User has been followed\"\n}"
+				},
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": 403821611,\n    \"follow_id\": 300136223\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/api/v1/follows",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"follows"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"12730689806f8fedf69ad02e68bd4c87\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "ef2329c9-a5a1-44a8-804a-c48162cf3917"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.019581"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "start_processing.action_controller;dur=0.23, sql.active_record;dur=6.35, instantiation.active_record;dur=0.08, process_action.action_controller;dur=10.09"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": \"Follow success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Unfollow someone",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": 403821611,\n    \"unfollow_id\": 300136223\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/v1/unfollows",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"unfollows"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": 403821611,\n    \"unfollow_id\": 300136223\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/api/v1/unfollows",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"unfollows"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"5c9e81751b305c1dad35e921581044e2\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "528e2d32-218d-4af5-9d0c-da1e91ba5056"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.026948"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "start_processing.action_controller;dur=0.56, sql.active_record;dur=5.40, instantiation.active_record;dur=8.78, process_action.action_controller;dur=17.94"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": \"Unfollow success\"\n}"
+				},
+				{
+					"name": "Failed: cannot unfollow the unfollow",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": 403821611,\n    \"unfollow_id\": 300136223\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/api/v1/unfollows",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"unfollows"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "878718d8-f892-4103-8c1a-498c0dc61c32"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.032844"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "start_processing.action_controller;dur=20.37, sql.active_record;dur=3.20, instantiation.active_record;dur=0.11, process_action.action_controller;dur=6.65"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"err_msg\": \"User is not followed\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get sleep time ranking",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": 403821611\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/v1/sleep_ranking",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"sleep_ranking"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": 403821611\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/api/v1/sleep_ranking",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"sleep_ranking"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a36605a4a3fff11f99f53c2579de4f70\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "8e8efa63-f541-47ca-aa1b-4d74f5bf6e44"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.018020"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "start_processing.action_controller;dur=0.19, sql.active_record;dur=5.68, instantiation.active_record;dur=0.92, process_action.action_controller;dur=13.10"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"id\": 972903121,\n            \"name\": \"duplicate_sleep\",\n            \"created_at\": \"2022-12-15T13:02:29.010Z\",\n            \"updated_at\": \"2022-12-15T13:02:29.010Z\",\n            \"total_sleep_times\": 14\n        },\n        {\n            \"id\": 300136223,\n            \"name\": \"sleep_not_yet_over\",\n            \"created_at\": \"2022-12-15T13:02:29.010Z\",\n            \"updated_at\": \"2022-12-15T13:02:29.010Z\",\n            \"total_sleep_times\": 6\n        },\n        {\n            \"id\": 728038487,\n            \"name\": \"friend\",\n            \"created_at\": \"2022-12-15T13:02:29.010Z\",\n            \"updated_at\": \"2022-12-15T13:02:29.010Z\",\n            \"total_sleep_times\": 0\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Clock In records",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/v1/clock_ins?user_id=403821611",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"clock_ins"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "403821611"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/api/v1/clock_ins?user_id=403821611",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"clock_ins"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "403821611"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c175d55c1c430b42c7389537ed54e2e2\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "4b2cbed5-877f-4dfa-8cdf-af4ae261a27b"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.078046"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "sql.active_record;dur=2.56, start_processing.action_controller;dur=0.07, instantiation.active_record;dur=5.58, process_action.action_controller;dur=52.65"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"id\": 389161873,\n            \"user_id\": 403821611,\n            \"created_at\": \"2022-12-12T08:00:00.000Z\",\n            \"updated_at\": \"2022-12-15T13:02:29.008Z\",\n            \"sleep\": false\n        },\n        {\n            \"id\": 238776885,\n            \"user_id\": 403821611,\n            \"created_at\": \"2022-12-12T00:30:00.000Z\",\n            \"updated_at\": \"2022-12-15T13:02:29.008Z\",\n            \"sleep\": true\n        },\n        {\n            \"id\": 960250530,\n            \"user_id\": 403821611,\n            \"created_at\": \"2022-12-11T14:00:00.000Z\",\n            \"updated_at\": \"2022-12-15T13:02:29.008Z\",\n            \"sleep\": false\n        },\n        {\n            \"id\": 660133635,\n            \"user_id\": 403821611,\n            \"created_at\": \"2022-12-11T13:00:00.000Z\",\n            \"updated_at\": \"2022-12-15T13:02:29.008Z\",\n            \"sleep\": true\n        },\n        {\n            \"id\": 274720666,\n            \"user_id\": 403821611,\n            \"created_at\": \"2022-12-11T07:00:00.000Z\",\n            \"updated_at\": \"2022-12-15T13:02:29.008Z\",\n            \"sleep\": false\n        },\n        {\n            \"id\": 156677678,\n            \"user_id\": 403821611,\n            \"created_at\": \"2022-12-10T23:00:00.000Z\",\n            \"updated_at\": \"2022-12-15T13:02:29.008Z\",\n            \"sleep\": true\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}
