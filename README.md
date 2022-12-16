@@ -17,6 +17,7 @@ You can assume that there are only two fields on the users “id” and “name�
 You do not need to implement any user registration API.
 
 You can use any gems you like.
+
 ==========================================
 
 ## Definition / Why I design like this
