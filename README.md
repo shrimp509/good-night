@@ -62,14 +62,14 @@ You can test the APIs through the Postman by the postman collection examples(The
 
 I only implemented the testing of sleep time calculation, because I think the sleep time calculation logic is complex enough to be tested.
 
-1. $ RAILS_ENV=test bin/rails db:prepare
-2. $ RAILS_ENV=test bin/rails test
+1. `$ RAILS_ENV=test bin/rails db:prepare`
+2. `$ RAILS_ENV=test bin/rails test`
 
 ### Test at development environment
 
 You can import the mock data at the development environment from fixtures by the instructions below.
 
-1. $ bin/rails db:prepare
-2. $ bin/rails db:fixtures:load
-3. $ bin/rails console
+1. `$ bin/rails db:prepare`
+2. `$ bin/rails db:fixtures:load`
+3. `$ bin/rails console`
 4. Test as you wish
